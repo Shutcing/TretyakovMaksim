@@ -1,0 +1,524 @@
+/*-------ОБНУЛЕНИЕ------------------------------*/
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+html,
+body {
+  height: 100%;
+  line-height: 1;
+  font-size: 16px;
+  color: black;
+  background: #a8c0ef;
+  overflow: hidden;
+}
+/*------Container---------------------------*/
+[class*="__container"] {
+  max-width: 976px;
+  margin: 0 auto;
+  padding: 0 10px;
+  box-sizing: content-box;
+}
+/*--------Loading-----------------------------------------------*/
+#loading {
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+}
+.back {
+  background: url("../PortImg/loader.gif") no-repeat center center;
+  height: 100%;
+  width: 100%;
+  background-size: 60% 60%;
+  display: none;
+}
+/*-----LOGO---------------------------*/
+.logo {
+  z-index: 999;
+
+  &__circle {
+    position: absolute;
+    border-radius: 100%;
+    z-index: 1000;
+    background-color: white;
+  }
+}
+
+.logo__img {
+  cursor: pointer;
+}
+
+.logo img {
+  align-self: center;
+  z-index: 1001;
+  position: absolute;
+}
+
+/*----------------------------------------------*/
+.wrapper {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  &__container {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+/*----Spiral-------------------------------------------*/
+.spiral {
+  stroke-width: 15px;
+  stroke: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 500;
+}
+
+.platform {
+  position: absolute;
+  top: -100%;
+  z-index: 800;
+  scale: 0.9;
+  display: none;
+  border-radius: 10%;
+}
+
+.platform__content {
+  background: #fe9102;
+  border-radius: 10%;
+  z-index: 800;
+  position: relative;
+  cursor: pointer;
+}
+
+/*----Inf----------------------------------------*/
+.maket-line {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 500;
+}
+.line__text {
+  font-family: "Jost";
+  z-index: 1002;
+  font-weight: 600;
+}
+.hologram {
+  opacity: 0.7;
+  &__part {
+    opacity: 0.7;
+  }
+  &__place {
+    opacity: 0;
+  }
+  &__text {
+    font-family: "Jost";
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    position: absolute;
+    z-index: 3000;
+    top: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 110%;
+  }
+}
+
+.platform {
+  &__inf {
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 3%;
+  }
+
+  &__inf img {
+    width: 7%;
+    height: 7%;
+  }
+
+  &__inf-text {
+  }
+
+  &__technologies-text {
+  }
+}
+.project-link {
+  &__button1,
+  &__button2 {
+    background-color: #fe9102;
+    color: white;
+    border-radius: 10%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    position: absolute;
+  }
+
+  &__button1 {
+    background-color: white;
+    color: #fe9102;
+  }
+}
+
+.options__buttons {
+  display: flex;
+  gap: 60%;
+}
+
+/*---ABOUT---------------------------------------------*/
+.about {
+  top: 9%;
+  font-family: "Jost";
+  display: none;
+  flex-direction: column;
+  z-index: 1500;
+  position: absolute;
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 8%;
+  }
+
+  &__photo {
+    width: 30%;
+    position: relative;
+    perspective: 800px;
+    margin: -8% 2% 0 -6%;
+  }
+
+  &__photo img {
+    width: 100%;
+    transform: translateZ(800px);
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+  }
+
+  &__list {
+  }
+
+  &__point {
+    display: flex;
+    gap: 5%;
+    font-weight: 600;
+    font-size: 200%;
+    letter-spacing: 0.05em;
+  }
+
+  &__point a {
+    color: #fe25a7;
+  }
+
+  &__point:not(:first-child) {
+    margin-top: 5%;
+  }
+
+  &__point img {
+    width: 0px;
+    height: 0px;
+  }
+}
+.hello {
+  margin-left: 15%;
+  font-weight: 600;
+  font-size: 200%;
+  letter-spacing: 0.05em;
+}
+
+@keyframes showPhoto {
+  0% {
+    transform: translateZ(800px);
+  }
+  100% {
+    transform: translateZ(0px);
+  }
+}
+
+/*--HeroMask------------------------------------------------------------*/
+.hero {
+  min-height: 100vh;
+  padding: clamp(1rem, 2vw, 5rem);
+  display: flex;
+  align-items: center;
+}
+
+.hero--secondary {
+  --mask: radial-gradient(
+    circle at var(--x, 70%) var(--y, 50%),
+    black 8%,
+    transparent 0
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fe9102;
+  color: white;
+  -webkit-mask-image: var(--mask);
+  mask-image: var(--mask);
+}
+
+.hero__heading {
+  font-family: "Jost";
+  font-size: clamp(2rem, 2.5vw, 4rem);
+  display: flex;
+  transform: translate(-10%, -20%);
+  flex-wrap: nowrap;
+  flex-direction: column;
+  text-transform: uppercase;
+  margin: 0;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*-Form------------------------------------*/
+.form {
+  display: flex;
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  z-index: 10000;
+  cursor: default;
+
+  border-radius: 40px;
+  backdrop-filter: blur(20px);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.7) 0%,
+    rgba(255, 255, 255, 0.7) 100%
+  );
+  width: 40%;
+  height: 70%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  &__smear {
+  }
+}
+
+iframe {
+  max-width: 80%;
+  min-height: 80%;
+}
+
+.close {
+  z-index: 3000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  cursor: pointer;
+  &__line {
+    background: black;
+    width: 100%;
+    height: 20%;
+    border-radius: 20%;
+    transform-origin: center;
+    position: absolute;
+    right: 0;
+  }
+  &__line1 {
+    transform: rotate(45deg);
+  }
+  &__line2 {
+    transform: rotate(-45deg);
+  }
+}
+/*-------Gallery---------------------------------------*/
+.gallery {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  opacity: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+
+  &__scroll {
+    font-family: "Jost";
+    font-size: 400%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform;
+    transition-duration: 0.1s;
+  }
+
+  &__scroll img {
+    width: 20%;
+    transition: transform;
+    transition-duration: 0.1s;
+  }
+}
+
+/*-----notification---------------------------------------*/
+
+.notification {
+  display: none;
+  background-color: white;
+  border-radius: 5%;
+  position: absolute;
+  top: 30%;
+  left: 0;
+  z-index: 9999;
+  height: 30%;
+
+  &__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 350%;
+    font-family: "Jost";
+    font-weight: 400;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__img {
+    width: 10%;
+    margin: 0 10% 0 0;
+  }
+
+  &__text {
+  }
+
+  &__button {
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed #000;
+    cursor: pointer;
+  }
+}
+/*-----Link To Main----------------------------------------*/
+.link-to-main {
+  font-family: "Jost";
+  font-size: 200%;
+  display: flex;
+  position: absolute;
+  right: 5%;
+  top: 2%;
+  color: black;
+  z-index: 1500;
+  &__text {
+    margin-right: 1%;
+  }
+  &__img {
+    width: 1em;
+  }
+}
+
+/*---media------------------------------------*/
+
+@media (max-width: 1000px) {
+  .about {
+    flex-direction: row;
+  }
+  .hello {
+    font-size: 600%;
+    margin: 30% 0 0 5%;
+  }
+  .about__photo {
+    width: 150%;
+    position: relative;
+    perspective: 800px;
+    margin: -60% 2% 0 0%;
+    display: inline-block;
+  }
+  .about__content {
+    flex-direction: column;
+  }
+
+  .about__list {
+    position: absolute;
+    left: 7%;
+    top: 150%;
+  }
+
+  .about__point {
+    gap: 6%;
+    font-size: 500%;
+    letter-spacing: 0.05em;
+  }
+  .form {
+    width: 90%;
+    height: 70%;
+    left: 5%;
+  }
+
+  /*--Hologram----------------*/
+  // .hologram__text {
+  //   left: -10%;
+  // }
+
+  .platform__inf img {
+    width: 5%;
+    height: 5%;
+  }
+
+  .project-link__button2 {
+    background-color: white;
+    color: #fe9102;
+  }
+
+  iframe {
+    overflow: hidden;
+  }
+
+  /*---Link to main-------------*/
+  .link-to-main {
+    font-size: 350%;
+  }
+}

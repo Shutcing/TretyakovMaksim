@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="SCSS/math.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/jquery.marquee/1.4.0/jquery.marquee.min.js"
+      defer
+    ></script>
+    <script src="math.js" defer></script>
+    <title>Math</title>
+  </head>
+  <body>
+    <div id="loading">
+      <div class="back"></div>
+    </div>
+    <div class="wrapper">
+      <div class="about">
+        <div class="hello"></div>
+        <div class="about__content">
+          <div class="about__photo">
+            <img src="PortImg/me.svg" alt="" />
+          </div>
+          <ul class="about__list">
+            <li class="about__point">
+              <img src="PortImg/fiit.svg" alt="" />
+              <div></div>
+            </li>
+            <li class="about__point">
+              <img src="PortImg/teach.svg" alt="" />
+              <div></div>
+            </li>
+            <li class="about__point">
+              <img src="PortImg/coffee.svg" alt="" />
+              <div></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="wrapper__container none-cursor">
+        <div class="logo">
+          <div class="logo__circle"></div>
+          <img class="logo__img" src="PortImg/about.png" alt="" />
+        </div>
+        <div class="title">
+          <div class="title__text">Математика сложная</div>
+          <div class="title__smile">
+            <img src="PortImg/sad.svg" alt="" />
+          </div>
+        </div>
+
+        <div class="hero hero--secondary" aria-hidden="true" data-hero>
+          <div class="hero__heading"></div>
+        </div>
+      </div>
+      <div class="main">
+        <div class="run-string">
+          <div class="run-string__line line1"></div>
+          <div class="run-string__string marquee">
+            ЗАКАЖИ РЕПЕТИТОРСКУЮ ПОМОЩЬ
+          </div>
+          <div class="run-string__line line2"></div>
+        </div>
+        <div class="main__content">
+          <slider>
+            <div class="slider__cards">
+              <div class="slider__card card1"></div>
+              <div class="slider__card card2"></div>
+              <div class="slider__card card3"></div>
+            </div>
+
+            <div class="slider__circles">
+              <div class="slider__circle circle1"></div>
+              <div class="slider__circle circle2"></div>
+              <div class="slider__circle circle3"></div>
+            </div>
+          </slider>
+          <div class="information">
+            <div class="information__img">
+              <div class="information__title">Найди всю информацию</div>
+              <img src="PortImg/cube.svg" alt="" />
+            </div>
+            <div class="information__content">
+              в лёгкой структуре моих учебных брошюр
+            </div>
+            <script src="https://forms.yandex.ru/_static/embed.js"></script>
+          </div>
+        </div>
+        <div class="form">
+          <div class="close">
+            <div class="close__line close__line1"></div>
+            <div class="close__line close__line2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="notification">
+      <div class="notification__container">
+        <div class="notification__content">
+          <img src="PortImg/pltInf.svg" class="notification__img" />
+          <div class="notification__text">
+            Чтобы записаться на бесплатную консультацию, нажми на любое
+            свободное место на экране
+          </div>
+        </div>
+        <div class="notification__button">ок</div>
+      </div>
+    </div>
+    <a href="index.html" class="link-to-main">
+      <div class="link-to-main__text">назад</div>
+      <img src="PortImg/back.svg" class="link-to-main__img" />
+    </a>
+  </body>
+</html>
